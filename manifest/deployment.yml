@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: hmsapp
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: hmsapp
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: hmsapp
     spec:
       containers:
-      - name: myapp
-        image: chauhanhimani/todo-app:build-25
+      - name: hmsapp
+        image: savytech/hospital_management_app:build-25
         ports:
         - containerPort: 80
